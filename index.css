@@ -1,0 +1,144 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Modern and clean font */
+}
+
+body {
+  background: linear-gradient(to right, #f4a261, #e76f51); /* Improved gradient background */
+}
+
+/* Centering main container */
+.main-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.wheather-container {
+  width: 50%;
+  border-radius: 2rem;
+  padding: 2rem;
+  overflow: hidden;
+  background: #264653; /* Darker background for better contrast */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wheather-container:hover {
+  transform: scale(1.05); /* Slight zoom on hover for effect */
+}
+
+.wheather-container > h1 {
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.wheather-container > img {
+  width: 100%;
+  object-fit: cover;
+  height: 30vh;
+  border-radius: 1rem;
+}
+
+.wheather-head {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.wheather-head > input {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.wheather-head > input:focus {
+  background-color: #e9ecef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.wheather-head > button {
+  padding: 10px 40px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #f4a261;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.wheather-head > button:hover {
+  background-color: #2a9d8f;
+  transform: translateY(-2px);
+}
+
+.details-box {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.wheather-meter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wheather-meter > div {
+  color: #e76f51;
+  display: flex;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.wheather-meter > div > span {
+  color: #2a9d8f;
+  font-weight: bold;
+}
+
+.wheather-image {
+  width: 100px;
+  object-fit: contain;
+  height: 100px;
+}
+
+.wheather-image > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .wheather-container {
+    width: 90%;
+  }
+
+  .wheather-head {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .details-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
